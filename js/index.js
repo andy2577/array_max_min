@@ -1,4 +1,4 @@
-function bisort(arr) {
+function quickSort(arr) {
     if (arr.length <= 1) {
         return arr;
     }
@@ -12,6 +12,6 @@ function bisort(arr) {
             smaller.push(arr[i]);
         }
     }
-    var result = bisort(smaller).concat(pivot, bisort(bigger));
+    var result = quickSort(smaller).concat(pivot, quickSort(bigger));
     return result;
 }
