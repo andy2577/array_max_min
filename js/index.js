@@ -15,3 +15,5 @@ function quickSort(arr) {
     var result = quickSort(smaller).concat(pivot, quickSort(bigger));
     return result;
 }
+
+var list = [3, 5, 8, 12, 4, 12, 35, 34, 45, 90, 1];
