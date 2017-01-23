@@ -1,3 +1,7 @@
+function max(arry) {
+    var arr = quickSort(arry);
+    return arr.pop();
+    
 function quickSort(arr) {
     if (arr.length <= 1) {
         return arr;
@@ -15,5 +19,9 @@ function quickSort(arr) {
     var result = quickSort(smaller).concat(pivot, quickSort(bigger));
     return result;
 }
+}
 
-var list = [3, 5, 8, 12, 4, 12, 35, 34, 45, 90, 1];
+
+
+var list = [3, 5, 8, 12, 4, 12, 35, 34, 45, 90, 1, 2, 6];
+console.log(max(list));
